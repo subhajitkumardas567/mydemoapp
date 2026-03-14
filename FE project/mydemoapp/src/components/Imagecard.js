@@ -3,7 +3,7 @@ function Imagecard({name,imglink}){
     return(
         <div>
             <h2>{name}</h2>
-            <img src={imglink} alt="placeholder"/>
+            <img src={"https://avatars.githubusercontent.com/u/172288926?v=4"} alt="placeholder"/>
         </div>
     );
 }
