@@ -13,12 +13,15 @@ const CartCounter = () => {
         setValue(value-1);
         console.log(`decrementing counter: ${value}`);
     }
+    const incrementButtonProps = value >=20 ? {disabled:true} : {onClick:incrementCounter};//incrementButtonProps this will hold the object on basis of condition, it has object 
+    const decrementButtonProps = value <=1 ? {disabled:true} : {onClick:decrementCounter};//decrementButtonProps this will hold the object on basis of condition, it has object 
     return (
         <>
-        {value>=20 ? <button disabled>+</button> :<button onClick={incrementCounter}>+</button>}
-        
+            {/* {value>=20 ? <button disabled>+</button> :<button onClick={incrementCounter}>+</button>} */}
+            <button {...incrementButtonProps}>+</button>
             <h3>{value}</h3>
-            {value <= 1 ? <button disabled>-</button> :<button onClick={decrementCounter}>-</button>}
+            <button {...decrementButtonProps}>-</button>
+            {/* {value <= 1 ? <button disabled>-</button> :<button onClick={decrementCounter}>-</button>} */}
         </>
     );
     

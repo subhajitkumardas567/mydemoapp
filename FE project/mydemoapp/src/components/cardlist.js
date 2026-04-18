@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { userData } from "../constants/constant";
+import { userData } from "./constants/constant";
 import Imagecard from "./Imagecard";
 
-const CardList = () => {
+const CardList = ({placeholder}) => {
   const [showIndex, setShowIndex] = useState(null);
 
   const clickHandler = (index) => {
@@ -15,7 +15,7 @@ const CardList = () => {
         <div key={user.githubId}>
           <Imagecard
             name={user.name}
-            imglink={`https://avatars.githubusercontent.com/u/${user.githubId}?v=4`}
+            imglink={`https://avatars.githubusercontent.com/u/${user.githubId}?v=4`} placeholder={placeholder}
           />
 
           <h3
@@ -33,3 +33,5 @@ const CardList = () => {
 };
 
 export default CardList;
+// app.js -> cardlist.js -> imagecard.js  
+//prop    -> prop(carrier)     ->  consumer
