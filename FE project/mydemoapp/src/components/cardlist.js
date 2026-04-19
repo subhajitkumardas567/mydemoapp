@@ -2,7 +2,7 @@ import { useState } from "react";
 import { userData } from "./constants/constant";
 import Imagecard from "./Imagecard";
 
-const CardList = ({placeholder}) => {
+const CardList = () => {
   const [showIndex, setShowIndex] = useState(null);
 
   const clickHandler = (index) => {
@@ -15,7 +15,7 @@ const CardList = ({placeholder}) => {
         <div key={user.githubId}>
           <Imagecard
             name={user.name}
-            imglink={`https://avatars.githubusercontent.com/u/${user.githubId}?v=4`} placeholder={placeholder}
+            imglink={`https://avatars.githubusercontent.com/u/${user.githubId}?v=4`} 
           />
 
           <h3
