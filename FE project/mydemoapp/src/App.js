@@ -1,10 +1,11 @@
-import Imagecard from './components/Imagecard.js';
+//import Imagecard from './components/Imagecard.js';
 import './App.css';
+import CardList from './components/cardlist.js';
 
 function App() {
   return (
     <div className="App">
-      <Imagecard name="subhajit" imglink="https://avatars.githubusercontent.com/u/172288926?v=4"/>
+      <CardList placeholder="placeholder image" />
     </div>
   );
 }
