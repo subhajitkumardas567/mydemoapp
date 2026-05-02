@@ -1,10 +1,14 @@
 import Imagecard from './components/Imagecard.js';
 import './App.css';
 
+import Todolist from './components/Todolist.js';
+
+
 function App() {
   return (
     <div className="App">
-      <Imagecard name="subhajit" imglink="https://avatars.githubusercontent.com/u/172288926?v=4"/>
+      
+      <Todolist/>
     </div>
   );
 }
